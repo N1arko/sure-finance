@@ -29,6 +29,8 @@ on:
       - 'v*'
     branches:
       - main
+    paths-ignore:
+      - 'charts/**'
   schedule:
     - cron: '30 1 * * *'
 
@@ -94,6 +96,7 @@ jobs:
                 BASE_CONFIG+=$'\n'"type=raw,value=latest"
               else
                 BASE_CONFIG+=$'\n'"type=raw,value=stable"
+                BASE_CONFIG+=$'\n'"type=raw,value=latest"
               fi
             fi
           fi
