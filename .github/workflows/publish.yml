@@ -31,8 +31,7 @@ on:
       - main
     paths-ignore:
       - 'charts/**'
-  schedule:
-    - cron: '30 1 * * *'
+
 
 env:
   REGISTRY: ghcr.io
